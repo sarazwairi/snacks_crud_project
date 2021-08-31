@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>delete Snacks</h1>
+<form class="inline-block border-double border-4 border-black" action="" method="POST">
+    {% csrf_token%}
+    <p>Do you want to delete "{{snacks.title}}"</p>
+    <input class="inline-block border-double border-4 border-black" type="submit" value="YES">
+</form>
+{% endblock content %}

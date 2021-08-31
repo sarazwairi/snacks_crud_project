@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Create Snacks</h1>
+<form class="inline-block border-double border-4 border-black" action="" method="POST">
+   {% csrf_token%}
+    {{form.as_p}}
+    <input class="inline-block border-double border-4 border-black" type="submit" value="Create">
+</form>
+{% endblock content %}
