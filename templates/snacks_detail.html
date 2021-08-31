@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<nav>
+    <a href="{% url 'snacks_list' %}">Home</a>
+    <a href="{% url 'admin:index' %}">Admin</a>
+</nav>
+
+<section>
+    <h1>title:{{snacks.title}}</h1>
+    <p>Description:{{snacks.description}}</p>
+    <p>Purchaser:{{snacks.purchaser}}</p>
+    <a class="inline-block border-double border-4 border-black" href="{% url 'update_list' snacks.pk %}"> + Update snacks </a>
+    <a class="inline-block border-double border-4 border-black" href="{% url 'delete_list' snacks.pk %}">+ Delete snacks </a>
+
+
+
+</section>
+{% endblock content %}
